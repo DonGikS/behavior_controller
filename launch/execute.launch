@@ -1,0 +1,65 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="map_file" default="$(env HOME)/map_my_kiro.yaml"/>
+  <arg name="open_rviz" default="true"/>
+  <arg name="move_forward_only" default="false"/>
+
+  <!-- Turtlebot3 -->
+  <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- AMCL -->
+  <include file="$(find turtlebot3_navigation)/launch/amcl.launch"/>
+
+  <!-- move_base -->
+  <include file="$(find turtlebot3_navigation)/launch/move_base.launch">
+    <arg name="model" value="$(arg model)" />
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+    <arg name="cmd_vel_topic" default="/nav_vel" />
+  </include>
+
+  <!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find turtlebot3_navigation)/rviz/turtlebot3_navigation.rviz"/>
+  </group>
+
+
+<!-- automatic parking -->
+
+  <include file="$(find turtlebot3_bringup)/launch/includes/description.launch.xml">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui">
+    <param name="use_gui" value="true"/>
+    <param name="rate" value="50"/>
+  </node>
+
+  <node pkg="tf" type="static_transform_publisher" name="camera_rgb_optical_frame_to_cam" 
+    args="0 0 0 0 0 0 camera_rgb_optical_frame camera 10" />
+
+	<node pkg="ar_track_alvar" type="individualMarkersNoKinect" name="ar_track_alvar" respawn="false" output="screen">
+		<param name="marker_size"           type="double" value="5.15" />
+		<param name="max_new_marker_error"  type="double" value="0.08" />
+		<param name="max_track_error"       type="double" value="0.2" />
+		<param name="output_frame"          type="string" value="/base_footprint" />
+
+		<remap from="camera_image"  to="/raspicam_node/image" />
+		<remap from="camera_info"   to="/raspicam_node/camera_info" />
+	</node>
+
+  <node pkg="turtlebot3_automatic_parking_vision" type="automatic_parking_vision" name="automatic_parking_vision">
+    <remap from="cmd_vel" to="/doc_vel"/>
+  </node>
+
+  <node pkg="behavior_controller" type="trans_node" name="trans_node">
+  </node>
+  
+</launch>
+
