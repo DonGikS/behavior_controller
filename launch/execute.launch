@@ -57,9 +57,8 @@
   <node pkg="turtlebot3_automatic_parking_vision" type="automatic_parking_vision" name="automatic_parking_vision">
     <remap from="cmd_vel" to="/doc_vel"/>
   </node>
-<!--
+  <node name="image_transport" pkg="image_transport" type="republish" args="compressed in:=/raspicam_node/image raw out:=/raspicam_node/image" />
   <node pkg="behavior_controller" type="trans_node" name="trans_node">
   </node>
-  -->
 </launch>
 
