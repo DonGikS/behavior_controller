@@ -2,17 +2,17 @@
 
 >## 프로젝트 목차
 
->   >#### 1. 프로젝트 목적
->   >#### 2. 프로젝트 계획표
->   >#### 3. 사용된 장비
->   >#### 4. 설치(installing)
->   >#### 5. 실행(operating)
->   >#### 6. 참고자료
+#### 1. 프로젝트 목적
+#### 2. 프로젝트 계획표
+#### 3. 사용된 장비
+#### 4. 설치(installing)
+#### 5. 실행(operating)
+#### 6. 참고자료
 
 
 > ## 1. 프로젝트 목적
 
->   >로봇에 카메라를 부착하고 A에서 B지점으로 찍는 실내 네비게이션 로봇을 만들어라. </br>AR마커를 이용한 도킹스테이션을 기점으로 도착지점을 찍고 다시 돌아오게 설계해야한다.
+로봇에 카메라를 부착하고 A에서 B지점으로 찍는 실내 네비게이션 로봇을 만들어라. </br>AR마커를 이용한 도킹스테이션을 기점으로 도착지점을 찍고 다시 돌아오게 설계해야한다.
 
 > ## 2. 프로젝트 계획표
 
@@ -97,6 +97,40 @@
 ![map_design](https://user-images.githubusercontent.com/29765871/94400919-d2eddb80-01a4-11eb-9ce0-6abc67c6fc47.jpg)</br>
 
 > ## 4.설치(installing)
++ remote PC</br>
+    + ROS 1 설치[Link][http://wiki.ros.org/melodic/Installation/Ubuntu]를 통해 설치한다.
 
+    + 필요한 Depandancy 설치
+    <pre>
+    <code>
+        sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc ros-melodic-rgbd-launch ros-melodic-depthimage-to-laserscan ros-melodic-rosserial-arduino ros-melodic-rosserial-python ros-melodic-rosserial-server ros-melodic-rosserial-client ros-melodic-rosserial-msgs ros-melodic-amcl ros-melodic-map-server ros-melodic-move-base ros-melodic-urdf ros-melodic-xacro ros-melodic-compressed-image-transport ros-melodic-rqt-image-view ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers
+    </code>
+    </pre>
+    + Turtlebot3 패키지 설치(melodic version)
+    <pre>
+    <code>
+        cd ~/catkin_ws/src/
+        git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+        git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
+        cd ~/catkin_ws && catkin_make
+    </code>
+    </pre>
+    + Turtlebot3 application 패키지 설치(melodic version)
+    <pre>
+    <code>
+        git clone https://github.com/ros-perception/ar_track_alvar.git
+        cd ~/catkin_ws/src
+        git clone https://github.com/ROBOTIS-GIT/turtlebot3_applications.git
+        git clone https://github.com/ROBOTIS-GIT/turtlebot3_applications_msgs.git
+        cd ~/catkin_ws && catkin_make
+    </code>
+    </pre>
++ turtlebot3
 > ## 5.실행(operating)
 > ## 6.참고자료
+>   >[ar_track_alvar][http://wiki.ros.org/ar_track_alvar]
+>   >[teb_local_planner_tutorials][http://wiki.ros.org/teb_local_planner_tutorials]
+>   >[turtlebot3_application_auto_parking_vision][https://emanual.robotis.com/docs/en/platform/turtlebot3/applications/]
+>   >[turtlebot3_slam][https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/#run-navigation-nodes]
+>   >[ros_melodic_cartographer][https://aur.archlinux.org/packages/ros-melodic-cartographer-ros/]
+>   >[raspicam_node_too_slow][https://answers.ros.org/question/289300/very-low-image-publish-rate-from-raspicam_node-over-wifi/]
