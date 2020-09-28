@@ -82,19 +82,19 @@
 </table>
 
 > ## 3.사용된 장비
-+터틀봇3(Turtlebot3)
-![turtlebot3](https://user-images.githubusercontent.com/29765871/94400928-d3867200-01a4-11eb-8527-f40bc9f931c0.jpg)
-+raspberry pi camera
-![raspicamera](https://user-images.githubusercontent.com/29765871/94400925-d3867200-01a4-11eb-8a44-bfaabb81b42a.jpg)
-+Linux PC(OS : ubuntu 18.04)
-![ubuntu](https://user-images.githubusercontent.com/29765871/94400930-d41f0880-01a4-11eb-80d4-02589925b234.png)
-+ROS 1(melodic)
-![melodic](https://user-images.githubusercontent.com/29765871/94400921-d2eddb80-01a4-11eb-98b5-83e3f3dd4acb.jpeg)
++ 터틀봇3(Turtlebot3)</br>
+![turtlebot3](https://user-images.githubusercontent.com/29765871/94400928-d3867200-01a4-11eb-8527-f40bc9f931c0.jpg)</br>
++ raspberry pi camera</br>
+![raspicamera](https://user-images.githubusercontent.com/29765871/94400925-d3867200-01a4-11eb-8a44-bfaabb81b42a.jpg)</br>
++ Linux PC(OS : ubuntu 18.04)</br>
+![ubuntu](https://user-images.githubusercontent.com/29765871/94400930-d41f0880-01a4-11eb-80d4-02589925b234.png)</br>
++ ROS 1(melodic)</br>
+![melodic](https://user-images.githubusercontent.com/29765871/94400921-d2eddb80-01a4-11eb-98b5-83e3f3dd4acb.jpeg)</br>
 
 
-![ar_marker_tracking](https://user-images.githubusercontent.com/29765871/94400914-d1241800-01a4-11eb-930b-5832de80b8a0.png)
-![camera_calibration](https://user-images.githubusercontent.com/29765871/94400915-d2554500-01a4-11eb-90a8-b994f92cf59f.png)
-![map_design](https://user-images.githubusercontent.com/29765871/94400919-d2eddb80-01a4-11eb-9ce0-6abc67c6fc47.jpg)
+![ar_marker_tracking](https://user-images.githubusercontent.com/29765871/94400914-d1241800-01a4-11eb-930b-5832de80b8a0.png)</br>
+![camera_calibration](https://user-images.githubusercontent.com/29765871/94400915-d2554500-01a4-11eb-90a8-b994f92cf59f.png)</br>
+![map_design](https://user-images.githubusercontent.com/29765871/94400919-d2eddb80-01a4-11eb-9ce0-6abc67c6fc47.jpg)</br>
 
 > ## 4.설치(installing)
 
