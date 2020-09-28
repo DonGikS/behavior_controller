@@ -1,13 +1,13 @@
 # Indoor_Robot_Project
 
-## 프로젝트 목차
+>## 프로젝트 목차
 
-### 1. 프로젝트 목적
-### 2. 프로젝트 계획표
-### 3. 사용된 장비
-### 4. 설치(installing)
-### 5. 실행(operating)
-### 6. 참고자료
+>   >#### 1. 프로젝트 목적
+>   >#### 2. 프로젝트 계획표
+>   >#### 3. 사용된 장비
+>   >#### 4. 설치(installing)
+>   >#### 5. 실행(operating)
+>   >#### 6. 참고자료
 
 
 > ## 1. 프로젝트 목적
@@ -82,14 +82,19 @@
 </table>
 
 > ## 3.사용된 장비
->   >+터틀봇3(Turtlebot3)
->   ><img src="image/turtlebot3.jpg" width="40%" height="30%" title="turtlebot3" alt="Robot"></img>
->   >+raspberry pi camera
->   ><img src="image/raspicamera.jpg" width="40%" height="30%" title="raspicamera" alt="Camera"></img>
->   >+Linux PC(OS : ubuntu 18.04)
->   ><img src="image/ubuntu.jpg" width="40%" height="30%" title="ubuntu" alt="Linux OS"></img>
->   >+ROS 1(melodic)
->   ><img src="image/melodic.jpg" width="40%" height="30%" title="melodic" alt="ROS version"></img>
++터틀봇3(Turtlebot3)
+![turtlebot3](https://user-images.githubusercontent.com/29765871/94400928-d3867200-01a4-11eb-8527-f40bc9f931c0.jpg)
++raspberry pi camera
+![raspicamera](https://user-images.githubusercontent.com/29765871/94400925-d3867200-01a4-11eb-8a44-bfaabb81b42a.jpg)
++Linux PC(OS : ubuntu 18.04)
+![ubuntu](https://user-images.githubusercontent.com/29765871/94400930-d41f0880-01a4-11eb-80d4-02589925b234.png)
++ROS 1(melodic)
+![melodic](https://user-images.githubusercontent.com/29765871/94400921-d2eddb80-01a4-11eb-98b5-83e3f3dd4acb.jpeg)
+
+
+![ar_marker_tracking](https://user-images.githubusercontent.com/29765871/94400914-d1241800-01a4-11eb-930b-5832de80b8a0.png)
+![camera_calibration](https://user-images.githubusercontent.com/29765871/94400915-d2554500-01a4-11eb-90a8-b994f92cf59f.png)
+![map_design](https://user-images.githubusercontent.com/29765871/94400919-d2eddb80-01a4-11eb-9ce0-6abc67c6fc47.jpg)
 
 > ## 4.설치(installing)
 
