@@ -142,25 +142,23 @@
         + turtlebot3_bringup/launch/turtlebot3_rpicamera.launch 파일 수정
     <pre>
         <code>
-            <launch>
-                <node type="raspicam_node" pkg="raspicam_node" name="raspicam_node" output="screen">
-                    
-                    <param name="framerate" type="int" value="30" />
-                    <param name="exposure_mode" value="antishake" />
-                    <param name="shutter_speed" value="0" />
-                    <param name="quality" type="int" value="10" />
-                    <param name="width" type="int" value="320" />
-                    <param name="height" type="int" value="240" />
-                    <!--뒤집혀있으면 넣는다
-                    <param name="hFlip" type="int" value="true" />
-                    <param name="vFlip" type="int" value="true" />
-                    -->
+            <node type="raspicam_node" pkg="raspicam_node" name="raspicam_node" output="screen">
+                
+                <param name="framerate" type="int" value="30" />
+                <param name="exposure_mode" value="antishake" />
+                <param name="shutter_speed" value="0" />
+                <param name="quality" type="int" value="10" />
+                <param name="width" type="int" value="320" />
+                <param name="height" type="int" value="240" />
+                <!--뒤집혀있으면 넣는다
+                <param name="hFlip" type="int" value="true" />
+                <param name="vFlip" type="int" value="true" />
+                -->
 
-                    <param name="camera_frame_id" value="camera" />
-                    <!--이거 있으면 카메라전송 속도가 빨라짐-->
-                    <param name="/raspicam_node/quality"  value="9"/>
-                </node>
-            </launch>
+                <param name="camera_frame_id" value="camera" />
+                <!--이거 있으면 카메라전송 속도가 빨라짐-->
+                <param name="/raspicam_node/quality"  value="9"/>
+            </node>
         </code>
     </pre> 
 
