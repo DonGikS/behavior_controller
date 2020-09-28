@@ -140,8 +140,7 @@
     + ROBOT(turtlebot3에서)</br>
         터틀봇 라즈베리파이 활성화[Link](https://emanual.robotis.com/docs/en/platform/turtlebot3/appendix_raspi_cam/)참고
         + turtlebot3_bringup/launch/turtlebot3_rpicamera.launch 파일 수정
-    <pre>
-        <code>
+        <launch>
             <node type="raspicam_node" pkg="raspicam_node" name="raspicam_node" output="screen">
                 
                 <param name="framerate" type="int" value="30" />
@@ -159,8 +158,7 @@
                 <!--이거 있으면 카메라전송 속도가 빨라짐-->
                 <param name="/raspicam_node/quality"  value="9"/>
             </node>
-        </code>
-    </pre> 
+        </launch>
 
     + Calibration with raspicam_node</br>
         + ROBOT(turtlebot3에서)</br>
