@@ -91,11 +91,6 @@
 + ROS 1(melodic)</br>
 ![melodic](https://user-images.githubusercontent.com/29765871/94400921-d2eddb80-01a4-11eb-98b5-83e3f3dd4acb.jpeg)</br>
 
-
-
-
-![map_design](https://user-images.githubusercontent.com/29765871/94400919-d2eddb80-01a4-11eb-9ce0-6abc67c6fc47.jpg)</br>
-
 > ## 4.설치(installing)
 + remote PC</br>
     + ROS 1 설치[Link](http://wiki.ros.org/melodic/Installation/Ubuntu)를 통해 설치한다.
@@ -161,6 +156,12 @@
         </launch>
 
     + Calibration with raspicam_node</br>
+        + Remote PC에서</br>
+        <pre>
+            <code>
+                roscore
+            </code>
+        </pre>
         + ROBOT(turtlebot3에서)</br>
         <pre>
             <code>
@@ -187,7 +188,13 @@
             </code>
         </pre>
 
-    + AR 마커 트래커
+    + AR 마커 트래커</br>
+        + Remote PC에서</br>
+        <pre>
+            <code>
+                roscore
+            </code>
+        </pre>
         + ROBOT(turtlebot3에서)</br>
         <pre>
             <code>
@@ -203,8 +210,53 @@
         </pre>
         fixed frame을 카메라 이름으로 한다.
     ![ar_marker_tracking](https://user-images.githubusercontent.com/29765871/94400914-d1241800-01a4-11eb-930b-5832de80b8a0.png)</br>
+
+    + 맵 제작</br>
+        + Remote PC에서</br>
+            <pre>
+                <code>
+                    roscore
+                </code>
+            </pre>
+            + ROBOT(turtlebot3에서)</br>
+            <pre>
+            <code>
+                roslaunch turtlebot3_bringup turtlebot3_robot.launch
+            </code>
+            <pre>
+                <code>
+                    roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=cartographer
+                </code>
+            </pre>
+            (mapping...)</br>
+            ![map_design](https://user-images.githubusercontent.com/29765871/94400919-d2eddb80-01a4-11eb-9ce0-6abc67c6fc47.jpg)</br>
+            <pre>
+                <code>
+                    rosrun map_server map_saver -f ~/map_my_kiro
+                </code>
+            </pre>
+            ![map_my_kiro](https://user-images.githubusercontent.com/29765871/94461101-a366bf80-01f4-11eb-99d9-748bfa834d99.png)
+
+
     
 > ## 5.실행(operating)
++ Remote PC에서</br>
+    <pre>
+        <code>
+            roscore
+        </code>
+    </pre>
+    + ROBOT(turtlebot3에서)</br>
+    <pre>
+    <code>
+        roslaunch turtlebot3_bringup turtlebot3_robot.launch
+        roslaunch turtlebot3_bringup turtlebot3_rpicamera.launch
+    </code>
+    <pre>
+        <code>
+            roslaunch behavior_controller execute.launch
+        </code>
+    </pre>
 > ## 6.참고자료
 >   >[raspberry_pi_camera_with_turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/appendix_raspi_cam/)
 >   >[ar_track_alvar](http://wiki.ros.org/ar_track_alvar)</br>
