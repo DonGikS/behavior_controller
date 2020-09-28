@@ -218,11 +218,13 @@
                     roscore
                 </code>
             </pre>
-            + ROBOT(turtlebot3에서)</br>
+        + ROBOT(turtlebot3에서)</br>
             <pre>
             <code>
                 roslaunch turtlebot3_bringup turtlebot3_robot.launch
+                
             </code>
+        + Remote PC에서</br>
             <pre>
                 <code>
                     roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=cartographer
@@ -235,7 +237,7 @@
                     rosrun map_server map_saver -f ~/map_my_kiro
                 </code>
             </pre>
-            ![map_my_kiro](https://user-images.githubusercontent.com/29765871/94461101-a366bf80-01f4-11eb-99d9-748bfa834d99.png)
+            ![Screenshot from 2020-09-29 01-47-44](https://user-images.githubusercontent.com/29765871/94462017-d9f10a00-01f5-11eb-8f34-c68dc19b0f67.png)
 
 
     
