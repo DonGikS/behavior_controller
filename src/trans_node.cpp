@@ -19,15 +19,13 @@ std_msgs::Bool home_check;
 geometry_msgs::Pose initial_Pose;
 geometry_msgs::Pose current_Pose;
 geometry_msgs::PoseStamped last_goal;
+
 int link_status_list = 0;
 int stat = 0;
 bool marker_dec = false;
 bool a = false;
 bool home_goal = false;
 
-void track_pose(const geometry_msgs::PoseStamped::ConstPtr& last_po){
-        
-}
 void init_pose(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& init_po){
     if(!link_status_list && (marker_dec == true)){
         initial_Pose = init_po->pose.pose;

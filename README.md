@@ -248,12 +248,13 @@
             roscore
         </code>
     </pre>
-    + ROBOT(turtlebot3에서)</br>
++ ROBOT(turtlebot3에서)</br>
     <pre>
     <code>
         roslaunch turtlebot3_bringup turtlebot3_robot.launch
         roslaunch turtlebot3_bringup turtlebot3_rpicamera.launch
     </code>
++ Remote PC에서</br>
     <pre>
         <code>
             roslaunch behavior_controller execute.launch
