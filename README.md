@@ -9,7 +9,8 @@
 #### 3. 사용된 장비
 #### 4. 설치(installing)
 #### 5. 실행(operating)
-#### 6. 참고자료
+#### 6. 블록다이어그램
+#### 7. 참고자료
 
 
 > ## 1. 프로젝트 목적
@@ -262,7 +263,14 @@
             roslaunch behavior_controller execute.launch
         </code>
     </pre>
-> ## 6.참고자료
+> ## 6.블록다이어그램
++하드웨어 블록다이어그램</br>
+![하드](https://user-images.githubusercontent.com/29765871/102717848-3ca2ff00-4328-11eb-89b3-93c020a6d530.JPG)</br>
++소프트웨어 블록다이어그램</br>
+![소프](https://user-images.githubusercontent.com/29765871/102717851-3dd42c00-4328-11eb-8c4d-69302c3f3ac7.JPG)</br>
++동작 알고리즘 블록다이어그램</br>
+![알고](https://user-images.githubusercontent.com/29765871/102717844-3b71d200-4328-11eb-9604-5064557dd48d.JPG)</br>
+> ## 7.참고자료
 >   >[raspberry_pi_camera_with_turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/appendix_raspi_cam/)
 >   >[ar_track_alvar](http://wiki.ros.org/ar_track_alvar)</br>
 >   >[teb_local_planner_tutorials](http://wiki.ros.org/teb_local_planner_tutorials)</br>
